@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Created by Morifeoluwa on 4/12/2016.
- * not yet working properly
+ * not yet working properly. still missing some test cases
  */
 public class CeaserCipher {
 
