@@ -8,11 +8,14 @@ import java.util.Scanner;
 public class ChocolateFeast {
     public static int quantity(int capital, int price, int discount){
 
-        int wraps = (capital / price);
-        int discountWraps = wraps / discount;
-        int sheddingWraps = ((wraps % discount) + discountWraps) / discount;
-        int totalWraps = wraps + discountWraps + sheddingWraps;
-        return totalWraps;
+        int total = capital / price;
+        int wrappers = total;
+        while(wrappers >= discount) {
+            total += (wrappers / discount);
+            int leftover = wrappers % discount;
+            wrappers = (wrappers / discount) + leftover;
+        }
+        return total;
     }
     public static void main (String[]args){
         Scanner in = new Scanner(System.in);
